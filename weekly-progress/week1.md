@@ -1,6 +1,4 @@
-# Week 1 Progress
-
-## Activities Completed
+## Week 1 - Activities Completed
 
 - Introductory meeting with placement host.
 - Finalised review question and objectives.
