@@ -16,13 +16,12 @@ columns_to_keep = [
     "Cancer Type",
     "Aerobic exercise",
     "Resistance training",
-    "Respiratory/Inspiratory Muscle Training",
+    "Respiratory Muscle Training",
     "Protein supplementation",
     "Dietary councelling",
-    "Complete  ONS",
-    "Micronutrients",
-    "Psychological",
-    "Lifestyle (smoking/alcohol)",
+    "Complete Oral Nutritional Supplement",
+    "Micronutrients supplementation",
+    "Psychological interventions",
     "Duration of Intervention",
     "Primary Outcome",
     "Functional Capacity",
@@ -30,7 +29,6 @@ columns_to_keep = [
     "Length of hospital stay",
     "Nutritional Status",
     "Quality of Life",
-    "Quality of Recovery score",
     "Neoadjuvant chemotherapy adherence",
     "Overall Risk of bias",
     "Concerning domain(s)"
@@ -40,13 +38,12 @@ columns_to_keep = [
 interventions = [
     "Aerobic exercise",
     "Resistance training",
-    "Respiratory/Inspiratory Muscle Training",
+    "Respiratory Muscle Training",
     "Protein supplementation",
     "Dietary councelling",
-    "Complete  ONS",
-    "Micronutrients",
-    "Psychological",
-    "Lifestyle (smoking/alcohol)",
+    "Complete Oral Nutritional Supplement",
+    "Micronutrients supplementation",
+    "Psychological interventions",
 ]
 
 outcomes = [
@@ -55,7 +52,6 @@ outcomes = [
     "Length of hospital stay",
     "Nutritional Status",
     "Quality of Life",
-    "Quality of Recovery score",
     "Neoadjuvant chemotherapy adherence",
 ]
 
