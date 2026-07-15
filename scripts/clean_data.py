@@ -28,7 +28,7 @@ columns_to_keep = [
     "Functional Capacity",
     "Post-operative complications",
     "Length of hospital stay",
-    "Nutritional Status",
+    "Nutritional Status/Body composition",
     "Quality of Life",
     "Neoadjuvant chemotherapy adherence"
 ]                            
@@ -50,7 +50,7 @@ outcomes = [
     "Functional Capacity",
     "Post-operative complications",
     "Length of hospital stay",
-    "Nutritional Status",
+    "Nutritional Status/Body composition",
     "Quality of Life",
     "Neoadjuvant chemotherapy adherence",
 ]

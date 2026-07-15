@@ -23,7 +23,7 @@ outcomes = [
     "Functional Capacity",
     "Post-operative complications",
     "Length of hospital stay",
-    "Nutritional Status",
+    "Nutritional Status/Body composition",
     "Quality of Life",
     "Neoadjuvant chemotherapy adherence",
 ]
@@ -45,7 +45,7 @@ short_outcomes = {
     "Functional Capacity": "Functional\ncapacity",
     "Post-operative complications": "Post-op\ncomplications",
     "Length of hospital stay": "Hospital\nstay",
-    "Nutritional Status": "Nutritional\nstatus",
+    "Nutritional Status/Body composition": "Nutritional\nstatus",
     "Quality of Life": "Quality\nof life",
     "Neoadjuvant chemotherapy adherence": "Neoadj. chemo\nadherence",
 }
