@@ -261,8 +261,40 @@ def plot_sample_size_dropouts(df, ax=None):
     return None
 
 
+# 4. DURATION OF INTERVENTION (HISTOGRAM)
+
+def plot_duration_histogram(df, ax=None):
+
+    own_fig = ax is None
+    if own_fig:
+        fig, ax = plt.subplots(figsize=(7, 4))
+
+    ax.hist(
+        df["Duration_weeks"].dropna(),
+        bins=8,
+        color="steelblue",
+        edgecolor="white",
+        linewidth=0.8)
+
+    ax.set_xlabel("Intervention duration (weeks)", fontsize=9)
+    ax.set_ylabel("Number of studies", fontsize=9)
+    ax.set_title("Distribution of intervention duration", fontsize=11, pad=10)
+
+    ax.tick_params(axis="x", labelsize=9)
+    ax.tick_params(axis="y", labelsize=9)
+
+    clean_ax(ax)
+  
+    ax.axhline(0, color="lightgrey", linewidth=0.8)
+
+    if own_fig:
+        fig.tight_layout()
+        return fig
+    return None
+
 if __name__ == "__main__":
     plot_intervention_frequency(df).savefig("figures/intervention_frequency.png", dpi=200, bbox_inches="tight")
     plot_outcome_effects(df).savefig("figures/outcome_effects.png", dpi=200, bbox_inches="tight")
     plot_sample_size_dropouts(df).savefig("figures/sample_size_dropouts.png", dpi=200, bbox_inches="tight")
+    plot_duration_histogram(df).savefig("figures/duration_of_intervention.png", dpi=200, bbox_inches="tight")
     plt.show()
