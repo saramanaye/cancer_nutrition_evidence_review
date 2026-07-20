@@ -189,7 +189,7 @@ def plot_outcome_effects(df, ax=None):
                     fontsize=8,
                     color="white" if color == "green" else "dimgrey")
                 
-         # Move the starting position for the next stacked section
+        # Move the starting position for the next stacked section
         left += vals
 
     # Set x-axis label and title
@@ -220,8 +220,49 @@ def plot_outcome_effects(df, ax=None):
         return fig
     return None
 
+# 3. SAMPLE SIZE AND DROPOUTS
+
+def plot_sample_size_dropouts(df, ax=None):
+    plot_df = df[["Author", "Year", "n_enrolled", "n_dropouts"]].copy()
+    plot_df["Study"] = plot_df["Author"] + " (" + plot_df["Year"].astype(int).astype(str) + ")"
+    plot_df = plot_df.sort_values("n_enrolled", ascending=True)
+
+    own_fig = ax is None
+    if own_fig:
+        fig, ax = plt.subplots(figsize=(9, 8))
+
+    ax.barh(
+        plot_df["Study"],
+        plot_df["n_enrolled"],
+        color="steelblue",
+        height=0.6,
+        label="Total sample size"
+    )
+
+    ax.barh(
+        plot_df["Study"],
+        plot_df["n_dropouts"],
+        color="darkgrey",
+        height=0.6,
+        label="Dropouts"
+    )
+
+    ax.set_xlabel("Number of participants", fontsize=9)
+    ax.set_title("Sample size and dropouts by study", fontsize=11, pad=10)
+    ax.tick_params(axis="y", labelsize=9)
+    ax.tick_params(axis="x", labelsize=9)
+    clean_ax(ax)
+    ax.axvline(0, color="lightgrey", linewidth=0.8)
+    ax.legend(frameon=False, fontsize=8, loc="lower right")
+
+    if own_fig:
+        fig.tight_layout()
+        return fig
+    return None
+
 
 if __name__ == "__main__":
     plot_intervention_frequency(df).savefig("figures/intervention_frequency.png", dpi=200, bbox_inches="tight")
     plot_outcome_effects(df).savefig("figures/outcome_effects.png", dpi=200, bbox_inches="tight")
+    plot_sample_size_dropouts(df).savefig("figures/sample_size_dropouts.png", dpi=200, bbox_inches="tight")
     plt.show()
