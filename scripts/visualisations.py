@@ -224,7 +224,7 @@ def plot_outcome_effects(df, ax=None):
 
 def plot_sample_size_dropouts(df, ax=None):
     plot_df = df[["Author", "Year", "n_enrolled", "n_dropouts"]].copy()
-    plot_df["Study"] = plot_df["Author"] + " (" + plot_df["Year"].astype(int).astype(str) + ")"
+    plot_df["Study"] = plot_df["Author"] + " (" + plot_df["Year"].astype(str) + ")"
     plot_df = plot_df.sort_values("n_enrolled", ascending=True)
 
     own_fig = ax is None
@@ -235,8 +235,7 @@ def plot_sample_size_dropouts(df, ax=None):
         plot_df["Study"],
         plot_df["n_enrolled"],
         color="steelblue",
-        height=0.6,
-        label="Total sample size"
+        height=0.6
     )
 
     ax.barh(

@@ -140,9 +140,6 @@ def clean_data(df):
     # Select only required columns 
     df = df[columns_to_keep].copy()
 
-    # Convert year to numeric
-    df["Year"]=pd.to_numeric(df["Year"], errors="coerce")
-
     # Apply consistent levels in interventions and outcome 
     for col in interventions:
         df[col]=df[col].map(normalise_intervention)
