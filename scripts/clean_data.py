@@ -146,8 +146,11 @@ def clean_data(df):
     for col in outcomes:
         df[col]=df[col].map(normalise_outcome)
 
+    # Extract sample size and dropouts 
     df=pd.concat([df,df["Sample size (dropouts)"].apply(combine_sample_and_dropouts)],
                  axis=1)
+
+    # Convert intervention duration to weeks
     df["Duration_weeks"] = df["Duration of Intervention"].map(duration_to_weeks)
     
     return df
