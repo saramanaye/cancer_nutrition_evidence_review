@@ -46,7 +46,7 @@ Eligibility criteria are defined using the PICOS framework.
 | **Intervention (I)** | Multimodal prehabilitation delivered in the preoperative period, comprising at least two components including exercise (aerobic and/or resistance training) and nutritional support (dietary counselling and/or protein/oral nutritional supplementation). | Unimodal prehabilitation; multimodal prehabilitation lacking either an exercise or nutrition component; interventions delivered exclusively postoperatively. |
 | **Comparator (C)** | Standard perioperative care, postoperative rehabilitation, enhanced recovery after surgery (ERAS) protocols alone, or usual care without a structured prehabilitation component. | Studies without a true comparator group. |
 | **Outcomes (O)** | At least one of: functional capacity (e.g., six-minute walk test, cardiopulmonary exercise testing), postoperative complications, length of hospital stay, health-related quality of life, nutritional status/body composition, neoadjuvant chemotherapy adherence. | Studies not reporting any predefined outcome. |
-| **Study Design (S)** | Randomised controlled trials (including cluster and quasi-RCTs); published 2016–2026; English language; human studies; full text available. | Non-randomised studies; publications before 2016; non-English language; animal studies; conference abstracts/registry records without full text. |
+| **Study Design (S)** | Randomised controlled trials; published 2016–2026; English language; human studies; full text available. | Non-randomised studies; publications before 2016; non-English language; animal studies; conference abstracts/registry records without full text. |
 
 ---
 
@@ -84,7 +84,7 @@ Search results from all databases will be exported into Rayyan for reference man
 
 Study selection, data extraction, and risk-of-bias assessment will be undertaken by one reviewer.
 
-A second reviewer will check screening decisions, extracted data and risk-of-bias assessments
+A second reviewer will check screening decisions, extracted data and risk-of-bias assessments.
 
 Any disagreements will be resolved through discussion.
 
