@@ -1,1 +1,1 @@
-This folder contains the evidence table used in this systematic review.
+This folder contains the evidence table and RoB assessment table used in this systematic review.
