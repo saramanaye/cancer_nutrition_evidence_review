@@ -27,18 +27,16 @@ To develop evidence-based nutritional support pathways and educational resources
 
 * Systematic Review
 * Evidence Table
-* Evidence Map
-* Patient Educational Resource
-* Clinician Educational Resource
+* Evidence Map and other Visualisations
+* Patient and Clinician Educational Resource
 
 ## Repository Structure
 
 The repository will contain:
 
-* systematic-review/
+* systematic-review-overview/
 * evidence-table/
-* evidence-map/
-* patient-resource/
-* clinician-resource/
-* analysis/
+* risk-of-bias-assessment/
+* scripts/
+* visualisations/
 * weekly-progress/
