@@ -127,10 +127,12 @@ This repository represents a reproducible sample of the wider placement work rat
 This repository is licensed under the Creative Commons Attribution 4.0 International License. See the LICENSE file for details.
 
 ## Author
-Dr Sara Manaye
-MSc Health Data Science
+
+Dr Sara Manaye  
+MSc Health Data Science  
 University of Aberdeen
 
 ## Placement Organisation
+
 Dr Monika Gostic Nutrition Ltd.
 
