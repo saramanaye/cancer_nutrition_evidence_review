@@ -8,7 +8,7 @@ This repository documents a professional placement project undertaken as part of
 
 ## Aims and Objectives
 
-To develop evidence-based nutritional support pathways and educational resources for individuals before cancer treatment through the systematic identification, appraisal, synthesis, and communication of evidence from multimodal prehabilitation interventions.
+To develop evidence-based nutritional support pathways and educational resources for individuals before cancer treatment through the identification, appraisal, synthesis, and communication of evidence from multimodal prehabilitation interventions.
 
 The objectives were to:
 * Conduct a systematic review on multimodal prehabilitation for patients undergoing cancer surgery
@@ -30,13 +30,13 @@ The project involved:
 * Translating the evidence into patient and clinician facing resources
 * Developing evidence-informed knowledge base for AI cancer nutrition assistant
 
-Microsoft Excel was used for evidence extraction and data management. Python, including pandas, Matplotlib and regular expressions, was used to clean, organise, analyse and visualise the extracted data.
+Microsoft Excel was used for evidence extraction and data management. Python, including pandas, numpy, matplotlib and regular expressions was used to clean, organise, analyse and visualise the extracted data.
 
 ## Main Findings 
 
-The included interventions combined nutritional and exercise support, with some programmes also incorporating psychological support. The findings suggest that prehabilitation should begin as early as possible after the treatment decision. Although around four weeks was commonly used, shorter programmes may still be beneficial when surgery cannot be delayed. Support should be personalised according to nutritional risk, functional capacity and the available preoperative window.
+The included interventions combined nutritional and exercise support, with some programmes also incorporating psychological support. The findings suggest that prehabilitation should begin as early as possible after the treatment decision. Although around four weeks was commonly used, shorter programmes may still be beneficial when surgery cannot be delayed. Support should be personalised according to nutritional risk, functional capacity and the available preoperative window.  
 
-Nutritional support commonly involved dietitian-led assessment and counselling, optimisation of energy and protein intake, and oral nutritional supplements or protein supplementation where appropriate. Exercise programmes commonly included aerobic activity, resistance training and, in some cases, respiratory muscle training. Delivery varied between supervised, home-based programmes and blended approaches. 
+Nutritional support commonly involved dietitian-led assessment and counselling, optimisation of energy and protein intake, and oral nutritional supplements or protein supplementation where appropriate. Exercise programmes commonly included aerobic activity, resistance training and in some cases, respiratory muscle training. Delivery varied between supervised, home-based programmes and mixed approaches.  
 
 Functional capacity was the most consistently measured outcome and generally improved following prehabilitation. Findings for postoperative complications, length of hospital stay, nutritional status, body composition and quality of life were more variable.
 
@@ -68,7 +68,7 @@ The findings from the project informed:
 * Evidence-based nutritional guidance for patients preparing for cancer treatment
 * Content for a cancer nutrition website and digital resource library
 * Development of educational resources and clinical knowledge base for a virtual nutrition assistant
-* Future development of personalised prehabilitation support pathways
+* Development of personalised prehabilitation support pathways
 
 ## Repository Structure 
 
@@ -78,7 +78,7 @@ systematic-review/
     
 data/
 
-    Contains the extracted evidence table (Evidence_Table.xlsx), a cleaned CSV dataset used for analysis (cleaned_evidence_table.csv), and the RoB 2 risk-of-bias assessment (risk_of_bias_rob2.xlsx)
+    Contains the extracted evidence table (Evidence_Table.xlsx), a cleaned CSV dataset used for analysis (cleaned_evidence_table.csv), and the risk-of-bias assessment (risk_of_bias_rob2.xlsx)
 
 scripts/
 
@@ -90,7 +90,7 @@ figures/
 
 weekly-progress/
 
-    Contains weekly placement records documenting the activities completed, development of the review and progression of the wider project.
+    Contains weekly placement records documenting the activities completed, development of the review and progression of the project.
 
 ## How to Navigate This Repository
 
@@ -99,7 +99,7 @@ For an overview of the project, begin with this README.
 1. Start with systematic-review/ to understand the review question, eligibility criteria and methods.
 2. Review data/ to examine the extracted evidence table, cleaned dataset and RoB 2 risk-of-bias assessment.
 3. Open scripts/ to view the Python code used to load and clean the data and generate the evidence maps and other visualisations.
-4. View figures/ to see the visual outputs from the evidence synthesis, including the PRISMA flow diagram, RoB 2 traffic-light plot, intervention characteristics and outcome figures.
+4. View figures/ to see the visual outputs from the evidence synthesis, including the PRISMA flow diagram, RoB 2 traffic-light plot, intervention and outcome figures.
 5. Check weekly-progress/ for a chronological record of the placement activities and completed work across the placement period.
 
 ## Reproducing the Visualisations
