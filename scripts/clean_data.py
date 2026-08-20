@@ -1,6 +1,19 @@
+"""
+Cleans the raw evidence table and exports a tidy version for analysis and plotting.
+
+Input: data/Evidence_Table.xlsx
+Output: data/cleaned_evidence_table.csv
+
+Cleaning steps:
+    1. Strip whitespace from column names and cell values
+    2. Keep only the columns needed for analysis
+    3. Standardise intervention columns to "Yes" / "No" / "Not reported"
+    4. Standardise outcome columns to "Improved" / "No effect" / "Not reported"
+    5. Split "Sample size (dropouts)" into separate n_enrolled / n_dropouts columns
+    6. Convert intervention duration to a single "Duration_weeks" column
+"""
+
 import re
-from pathlib import Path
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
@@ -55,7 +68,7 @@ outcomes = [
     "Neoadjuvant chemotherapy adherence",
 ]
 
-# DATA CLEANING FUCTIONS
+# DATA CLEANING FUNCTIONS
 
 # Remove white space, multiple spaces and new lines on any string
 
@@ -88,7 +101,8 @@ def normalise_outcome(x):
         return "No effect"
     return "Not reported"
 
-# Extract sample size and dropouts 
+# Extract sample size and dropouts (handles multiple arms in one cell)
+
 
 def combine_sample_and_dropouts(x):
     if pd.isna(x):
@@ -114,7 +128,7 @@ def duration_to_weeks(x):
     if not numbers:
         return np.nan
 
-    # If it the value is a range like 3-6 weeks, use the midpoint
+    # If the value is a range like 3-6 weeks, use the midpoint
     if len(numbers) >= 2 and "-" in x:
         value = (float(numbers[0]) + float(numbers[1])) / 2
     else:

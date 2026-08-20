@@ -1,3 +1,23 @@
+"""
+Builds an "evidence gap map" showing, for every intervention-outcome
+pair, how many studies provide evidence on that combination.
+
+Input:  data/cleaned_evidence_table.csv
+Output: figures/evidence_gap_map.png
+
+Each cell in the grid (intervention x outcome) is colour-coded by how
+much evidence exists for that combination:
+    - Dark grey  : no studies included this intervention and reported
+                   this outcome (a true evidence gap)
+    - Light grey : some studies (n < min_studies), but too few to be
+                   considered sufficient evidence
+    - Blue       : n >= min_studies, with darker blue indicating a
+                   higher study count
+
+This is a descriptive summary only (counts of available evidence) and
+does not imply any causal relationship between intervention and outcome.
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -187,4 +207,4 @@ ax.set_ylabel("Intervention component", fontsize=9, labelpad=10)
 
 if __name__ == "__main__":
     plt.savefig("figures/evidence_gap_map.png", dpi=200, bbox_inches="tight")
-    fig.tight_layout()
+    plt.show()

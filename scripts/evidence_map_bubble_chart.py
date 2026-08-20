@@ -1,7 +1,27 @@
+"""
+Builds an "evidence map" bubble chart summarising how each intervention
+component relates to each reported outcome across the included studies.
+
+Input:  data/cleaned_evidence_table.csv
+Output: figures/evidence_map_bubble_chart.png
+
+For every (intervention, outcome) pair, a bubble is plotted where:
+    - x position = outcome
+    - y position = intervention
+    - bubble size  = number of studies using that intervention that
+                      reported that outcome 
+    - bubble colour = percentage of those studies reporting "Improved"
+                       (green = high improvement, red = low)
+
+This gives a quick visual summary of both the volume of evidence
+(bubble size) and the direction of evidence (bubble colour) for each
+intervention-outcome combination.
+"""
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 
 # Interventions and outcomes
@@ -190,3 +210,4 @@ legend = ax.legend(
 
 plt.tight_layout()
 plt.savefig("figures/evidence_map_bubble_chart.png", dpi=300, bbox_inches="tight")
+plt.show()

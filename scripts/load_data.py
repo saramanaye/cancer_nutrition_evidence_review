@@ -1,3 +1,8 @@
+""" 
+Loads the raw evidence table and prints a summary of its shape,
+columns, missing values, and first few rows.
+"""
+
 import pandas as pd 
 
 def load_evidence_table():

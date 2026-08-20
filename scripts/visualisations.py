@@ -1,10 +1,22 @@
+"""
+Generates summary figures for systematic review 
+
+Input:  data/cleaned_evidence_table.csv
+Output: PNG figures saved to figures/
+
+Figures produced:
+    1. Intervention frequency across included studies
+    2. Outcome effects across included studies
+    3. Sample size and dropouts by study
+    4. Distribution of intervention duration
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
 
 df = pd.read_csv("data/cleaned_evidence_table.csv")
-
 
 # Intervention and Outcome lists
 
@@ -94,6 +106,8 @@ def add_bar_labels(ax, values, horizontal=True):
 
 # 1. INTERVENTION FREQUENCY PLOT
 
+# Horizontal bar chart showing how many included studies reported using each intervention type
+
 def plot_intervention_frequency(df, ax=None):
 
     # Count number of studies reporting each intervention
@@ -110,9 +124,8 @@ def plot_intervention_frequency(df, ax=None):
     if own_fig:
         fig, ax = plt.subplots(figsize=(8, 5))
 
-    # CREATE A HORIZONTAL BAR CHART
-
-    bars = ax.barh(counts.index, counts.values,
+    # Create a horizontal bar chart of study counts per intervention
+    ax.barh(counts.index, counts.values,
                    color="steelblue", height=0.6)
 
     # Add numerical labels to each bar
@@ -144,9 +157,12 @@ def plot_intervention_frequency(df, ax=None):
 
 # 2. OUTCOME EFFECTS PLOT
 
+# Stacked horizontal bar chart 
+# Shows for each outcome, how many studies reported "Improved", "No effect", or "Not reported"
+
 def plot_outcome_effects(df, ax=None):
 
-    # Define outcome categories, associate colors  and shortened labels
+    # Define outcome categories, associated colors  and shortened labels
     levels=["Improved", "No effect", "Not reported"]
     colors=["green", "darkgrey", "lightgrey"]
     labels=[short_outcomes[o] for o in outcomes]
@@ -166,7 +182,7 @@ def plot_outcome_effects(df, ax=None):
     if own_fig:
         fig, ax = plt.subplots(figsize=(9, 5))
 
-    # CREATE A STACKED HORIZONTAL BAR CHART
+    # Create a stacked horizontal bar chart
 
     # Create an array of zeros for each outcome
     # Denotes starting position of each bar
@@ -174,10 +190,12 @@ def plot_outcome_effects(df, ax=None):
 
     # Plot one section for each outcome category
     for level, color in zip(levels, colors):
+
         # Get number of studies in current level
         vals = counts[level].values
         bars = ax.barh(labels, vals, left=left,
                        color=color, edgecolor="white", linewidth=0.8, height=0.6)
+        
         # Add values inside each bar
         for bar, val in zip(bars, vals):
             if val >=1:
@@ -222,6 +240,8 @@ def plot_outcome_effects(df, ax=None):
 
 # 3. SAMPLE SIZE AND DROPOUTS
 
+# Horizontal bar chart comparing each study's enrolled sample size against the number of participants who dropped out
+
 def plot_sample_size_dropouts(df, ax=None):
     plot_df = df[["Author", "Year", "n_enrolled", "n_dropouts"]].copy()
     plot_df["Study"] = plot_df["Author"] + " (" + plot_df["Year"].astype(str) + ")"
@@ -231,6 +251,7 @@ def plot_sample_size_dropouts(df, ax=None):
     if own_fig:
         fig, ax = plt.subplots(figsize=(9, 8))
 
+    # Bar 1: total enrolled participants per study
     ax.barh(
         plot_df["Study"],
         plot_df["n_enrolled"],
@@ -238,6 +259,7 @@ def plot_sample_size_dropouts(df, ax=None):
         height=0.6
     )
 
+    # Bar 2: dropouts, overlaid on the same axis for comparison
     ax.barh(
         plot_df["Study"],
         plot_df["n_dropouts"],
@@ -261,6 +283,8 @@ def plot_sample_size_dropouts(df, ax=None):
 
 
 # 4. DURATION OF INTERVENTION (HISTOGRAM)
+
+# Plot a histogram of intervention duration (weeks) across studies.
 
 def plot_duration_histogram(df, ax=None):
 
@@ -290,6 +314,8 @@ def plot_duration_histogram(df, ax=None):
         fig.tight_layout()
         return fig
     return None
+
+# Generate all four figures and save them to the figures/ directory 
 
 if __name__ == "__main__":
     plot_intervention_frequency(df).savefig("figures/intervention_frequency.png", dpi=200, bbox_inches="tight")
