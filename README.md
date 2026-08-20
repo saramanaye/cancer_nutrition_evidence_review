@@ -22,10 +22,10 @@ The project involved:
 * Developing the review question and eligibility criteria
 * Conducting structured literature searches to identify relevant randomised controlled trials
 * Screening studies against predefined criteria
-* Extracting study, participant, intervention and outcome data into evidence table
+* Extracting study, participant, intervention and outcome data into a structured evidence table
 * Assessing risk of bias using the Cochrane Risk of Bias 2 tool
 * Conducting a narrative synthesis of the evidence
-* Developing evidence map and other data visualisations
+* Developing an evidence map and other data visualisations
 * Interpreting findings for clinical and organisational use
 * Translating the evidence into patient and clinician facing resources
 * Developing evidence-informed knowledge base for AI cancer nutrition assistant
@@ -46,8 +46,7 @@ The placement produced:
 * A completed systematic review manuscript
 * A structured evidence table
 * Risk-of-bias assessment for the included studies
-* An evidence map
-* Descriptive data visualisations
+* An evidence map and descriptive data visualisations
 * Evidence-based resources including prehabilitation guide and brochure for patients 
 * Multiple patient education guides covering protein intake, energy intake and meal planning
 * A Frequently Asked Questions document on nutritional prehabilitation
@@ -103,6 +102,35 @@ For an overview of the project, begin with this README.
 4. View figures/ to see the visual outputs from the evidence synthesis, including the PRISMA flow diagram, RoB 2 traffic-light plot, intervention characteristics and outcome figures.
 5. Check weekly-progress/ for a chronological record of the placement activities and completed work across the placement period.
 
+## Reproducing the Visualisations
+
+To reproduce the available visualisations:
+1. Download or clone the repository.
+2. Ensure that Python is installed.
+3. Install the required packages: pandas, numpy, matplotlib
+4. Open the relevant script in the scripts/ directory.
+5. Confirm that the input file path refers to the corresponding file in the data/ directory.
+6. Run the script from the repository’s root directory.
+The generated figures will be saved in the figures/ directory where specified by the script.
+
+## Data and Confidentiality
+
+This public repository contains only materials that can be shared for academic assessment, reproducibility and professional portfolio purposes.
+It does not contain identifiable patient information, confidential organisational information, the final manuscript submitted for publication, or host-owned patient and clinician resources that are not approved for public distribution.
+
+## Limitations
+
+This repository represents a reproducible sample of the wider placement work rather than the complete collection of materials produced during the placement. Some outputs have been excluded because of confidentiality, intellectual-property or publication considerations.
+
 ## License
 
-This repository is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License. See the LICENSE file for details.
+This repository is licensed under the Creative Commons Attribution 4.0 International License. See the LICENSE file for details.
+
+## Author
+Dr Sara Manaye
+MSc Health Data Science
+University of Aberdeen
+
+## Placement Organisation
+Dr Monika Gostic Nutrition Ltd.
+
