@@ -20,7 +20,7 @@ The cleaned CSV file was used to create the evidence maps and other summary visu
 
 ## Risk-of-Bias Data
 
-Risk of bias was assessed using the Cochrane RoB 2 tool
+Risk of bias was assessed using the Cochrane RoB 2 tool.  
 Each study was assigned an overall judgement of low risk of bias, some concerns, or high risk of bias. The `risk_of_bias_rob2.xlsx` file can be uploaded to the ROBVIS online visualisation tool to reproduce the RoB 2 traffic-light figure.
 
 
