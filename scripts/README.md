@@ -1,21 +1,21 @@
 ## Analysis Scripts
 
-Scripts used for data cleaning, analysis and visualisations 
+Scripts used for data cleaning, analysis and visualisations. 
 
 - load_data.py
-  Loads the extracted Evidence_Table data into Python for analysis and visualisation.
+  Loads the extracted Evidence_Table data into Python for analysis and visualisation.  
 
 - clean_data.py
-  Cleans and standardises the dataset, including intervention characteristics and outcome-reporting categories, so that the data can be analysed consistently.
+  Cleans and standardises the dataset, including intervention characteristics and outcome-reporting categories, so that the data can be analysed consistently.  
 
 - evidence_map.py
-  Creates the evidence map summarising the distribution of included studies according to their intervention components and reported outcomes.
+  Creates the evidence map summarising the distribution of included studies according to their intervention components and reported outcomes.  
 
 - evidence_map_bubble_chart.py
-  Produces a bubble-chart version of the evidence map, allowing the number of studies within each intervention–outcome category to be displayed visually.
+  Produces a bubble-chart version of the evidence map, allowing the number of studies within each intervention–outcome category to be displayed visually.  
 
 - visualisations.py 
-  Generates the remaining summary figures used in the review, including visualisations of intervention duration, intervention frequency, outcome effects, sample size and dropout patterns
+  Generates the remaining summary figures used in the review, including visualisations of intervention duration, intervention frequency, outcome effects, sample size and dropout patterns.  
 
 ## Workflow:
 
