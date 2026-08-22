@@ -1,6 +1,6 @@
-## Analysis Scripts
+# Analysis Scripts
 
-Scripts used for data cleaning, analysis and visualisations. 
+This folder contains the scripts used for data cleaning, analysis and visualisations. 
 
 - `load_data.py`  
   Loads the extracted Evidence_Table data into Python for analysis and visualisation.  
